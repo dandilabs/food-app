@@ -16,7 +16,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user() && Auth::user()->rolse == 'ADMIN')
+        if(Auth::user() && Auth::user()->roles == 'ADMIN')
         {
             return $next($request);
         }
