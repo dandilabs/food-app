@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2023 at 12:03 PM
+-- Generation Time: May 19, 2023 at 11:46 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -144,7 +144,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('poFUV6nsen8N5Nx0CuwojVzi0ttIeDIaBRDP7OV9', 1, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoid25SRVUxcTM4WVlOZWlXeFl1aDdtNnpac3ptbDQ3dzdzQ0dMeG9vQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJC5SOG9UZzEvNFRsVTVUdllhVndaei5GUmN0ellvb2cuT0xtYTMycmwxeUR5eVFVaVNYbEIuIjt9', 1684231327);
+('4tIePGUwwNCovM2MzLWrg3R38QrtkEFx0Yfbz9OT', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiM01aVU9Fd2ZGWGpja2wxWFhZdnN1akdsSVM1bk5WWnpKbVk4eUV4MyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO319', 1684489519);
 
 -- --------------------------------------------------------
 
@@ -166,7 +166,10 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `user_id`, `name`, `personal_team`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Dandi\'s Team', 1, '2023-05-14 22:31:53', '2023-05-14 22:31:53');
+(1, 1, 'Dandi\'s Team', 1, '2023-05-14 22:31:53', '2023-05-14 22:31:53'),
+(2, 3, 'User\'s Team', 1, '2023-05-18 20:37:14', '2023-05-18 20:37:14'),
+(3, 4, 'User\'s Team', 1, '2023-05-18 20:59:57', '2023-05-18 20:59:57'),
+(4, 6, 'Hikmah\'s Team', 1, '2023-05-19 02:44:46', '2023-05-19 02:44:46');
 
 -- --------------------------------------------------------
 
@@ -249,8 +252,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `address`, `houseNumber`, `phoneNumber`, `city`, `roles`, `created_at`, `updated_at`) VALUES
-(1, 'Dandi Hermawan', 'dandihermawan87@gmail.com', NULL, '$2y$10$.R8oTg1/4TlU5TvYaVwZz.FRctzYoog.OLma32rl1yDyyQUiSXlB.', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 'ADMIN', '2023-05-14 22:31:53', '2023-05-14 22:31:55'),
-(2, 'Sigit Widodo', 'sigit@gmail.com', NULL, '$2y$10$ReF.JFuHKcgi52V0wTnjP.YO97SWQjTxq7toS7rpcNuUwkwMD1vF.', NULL, NULL, NULL, NULL, NULL, NULL, 'adadadadas', '015146464684', '000121548798', 'adadada', 'USER', '2023-05-16 00:31:51', '2023-05-16 00:31:51');
+(1, 'Dandi Hermawan', 'dandihermawan87@gmail.com', NULL, '$2y$10$.R8oTg1/4TlU5TvYaVwZz.FRctzYoog.OLma32rl1yDyyQUiSXlB.', NULL, NULL, NULL, NULL, 1, NULL, 'Bintari', '082113120493', '089699451818', 'Pondok Aren', 'ADMIN', '2023-05-14 22:31:53', '2023-05-14 22:31:55'),
+(4, 'User', 'user@gmail.com', NULL, 'Dandihermawan12', NULL, NULL, NULL, NULL, 3, NULL, 'Bintaro Gallery', '082113120494', '089699451819', 'Pondok kacang', 'ADMIN', '2023-05-18 20:59:57', '2023-05-19 01:21:52'),
+(6, 'Hikmah Cantik', 'hikmah@gmail.com', NULL, '$2y$10$XCRpmhaS5NBSHEvq6tV2Te1PgGK4B/8EBzkfluCsCgxErlDk12XZG', NULL, NULL, NULL, NULL, 4, NULL, NULL, NULL, NULL, NULL, 'ADMIN', '2023-05-19 02:44:46', '2023-05-19 02:45:12');
 
 --
 -- Indexes for dumped tables
@@ -363,7 +367,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `team_invitations`
@@ -387,7 +391,7 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
